@@ -43,6 +43,24 @@ TARGET_NO_BOOTLOADER := true
 
 # Display
 TARGET_SCREEN_DENSITY := 320
+TARGET_SCREEN_HEIGHT := 720
+TARGET_SCREEN_WIDTH := 1600
+
+# MTP
+TW_HAS_MTP := true
+TW_MTP_DEVICE := /dev/mtp_usb
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.gs6/lun.%d/file
+RECOVERY_VARIANT := twrp
+TW_EXCLUDE_TWRPAPP := true
+
+# System prop
+TARGET_SYSTEM_PROP += device/multilaser/multilaser_g_max_2_se_64/system.prop
+
+# Brightness
+TW_BRIGHTNESS_PATH := /sys/class/backlight/sprd_backlight/brightness
+
+# Recovery fstab
+BOARD_SUPPRESS_EMMC_WIPE := true
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
